@@ -1,10 +1,11 @@
+const { setWorldConstructor } = require('@cucumber/cucumber')
 var sinon = require('sinon')
-var clock = sinon.useFakeTimers()
 
-function World () {
-  this.clock = clock
+class CustomWorld {
+  constructor () {
+    // needed so `attach`, `log` and `parameters` are properly set
+    this.clock = sinon.useFakeTimers()
+  }
 }
 
-module.exports = function () {
-  this.World = World
-}
+setWorldConstructor(CustomWorld)

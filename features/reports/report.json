@@ -1,240 +1,194 @@
 [
   {
-    "id": "Adaptive-Cruise-Control",
-    "name": "Adaptive Cruise Control",
-    "description": "As a driver\nI want my car to adjust its speed to the car in front of me\nSo that I can use my cruise control in traffic",
-    "line": 1,
-    "keyword": "Feature",
-    "uri": "/Users/finkingma/myProjects/adaptive-car/features/AdaptiveCC.feature",
+    "description": "  As a driver\n  I want my car to adjust its speed to the car in front of me\n  So that I can use my cruise control in traffic",
     "elements": [
       {
-        "name": "Car adjusts its speed when it reaches another car",
-        "id": "Adaptive-Cruise-Control;car-adjusts-its-speed-when-it-reaches-another-car",
+        "description": "",
+        "id": "adaptive-cruise-control;car-adjusts-its-speed-when-it-reaches-another-car",
+        "keyword": "Scenario",
         "line": 6,
-        "keyword": "Scenario",
-        "description": "",
-        "type": "scenario",
+        "name": "Car adjusts its speed when it reaches another car",
         "steps": [
           {
-            "keyword": "Before ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:2"
-            }
-          },
-          {
-            "name": "John drives at 60 mph",
+            "arguments": [],
+            "keyword": "Given ",
             "line": 7,
-            "keyword": "Given ",
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:5"
-            }
-          },
-          {
-            "name": "William drives at 70 mph",
-            "line": 8,
-            "keyword": "And ",
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:11"
-            }
-          },
-          {
-            "name": "William nears John",
-            "line": 9,
-            "keyword": "When ",
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:17"
-            }
-          },
-          {
-            "name": "Williams car will adjust its speed to 60 mph",
-            "line": 10,
-            "keyword": "Then ",
-            "result": {
-              "status": "passed",
-              "duration": 2000000000
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:23"
-            }
-          },
-          {
-            "keyword": "After ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:5"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Cruise Control adjustment is activated at a car distance of 10m",
-        "id": "Adaptive-Cruise-Control;cruise-control-adjustment-is-activated-at-a-car-distance-of-10m",
-        "line": 12,
-        "keyword": "Scenario",
-        "description": "",
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:2"
-            }
-          },
-          {
-            "name": "Johns is at the 20m marker",
-            "line": 13,
-            "keyword": "Given ",
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:31"
-            }
-          },
-          {
-            "name": "William is approaching John at the 10m marker",
-            "line": 14,
-            "keyword": "When ",
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:37"
-            }
-          },
-          {
-            "name": "Williams cruise control adjustment is activated",
-            "line": 15,
-            "keyword": "Then ",
-            "result": {
-              "status": "passed",
-              "duration": 1000000000
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:44"
-            }
-          },
-          {
-            "keyword": "After ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:5"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Car returns to its original speed when there are no cars in the vicinity",
-        "id": "Adaptive-Cruise-Control;car-returns-to-its-original-speed-when-there-are-no-cars-in-the-vicinity",
-        "line": 17,
-        "keyword": "Scenario",
-        "description": "",
-        "type": "scenario",
-        "steps": [
-          {
-            "keyword": "Before ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:2"
-            }
-          },
-          {
             "name": "John drives at 60 mph",
-            "line": 18,
-            "keyword": "Given ",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:5"
+            },
             "result": {
               "status": "passed",
               "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:5"
             }
           },
           {
-            "name": "William nears John at 70 mph",
-            "line": 19,
+            "arguments": [],
             "keyword": "And ",
+            "line": 8,
+            "name": "William drives at 70 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:10"
+            },
             "result": {
               "status": "passed",
-              "duration": 2000000000
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:50"
+              "duration": 0
             }
           },
           {
-            "name": "John speeds up to 80 mph",
-            "line": 20,
+            "arguments": [],
             "keyword": "When ",
+            "line": 9,
+            "name": "William nears John",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:15"
+            },
             "result": {
               "status": "passed",
               "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:60"
             }
           },
           {
-            "name": "Williams car will adjust its speed back to 70 mph",
-            "line": 21,
+            "arguments": [],
             "keyword": "Then ",
+            "line": 10,
+            "name": "Williams car will adjust its speed to 60 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:20"
+            },
             "result": {
               "status": "passed",
-              "duration": 2000000000
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/step_definitions/adaptiveCC_steps.js:65"
-            }
-          },
-          {
-            "keyword": "After ",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 0
-            },
-            "match": {
-              "location": "/Users/finkingma/myProjects/adaptive-car/features/support/hooks.js:5"
+              "duration": 1000000
             }
           }
-        ]
+        ],
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 5
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adaptive-cruise-control;cruise-control-adjustment-is-activated-at-a-car-distance-of-10m",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Cruise Control adjustment is activated at a car distance of 10m",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "Johns is at the 20m marker",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "William is approaching John at the 10m marker",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "Williams cruise control adjustment is activated",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "adaptive-cruise-control;car-returns-to-its-original-speed-when-there-are-no-cars-in-the-vicinity",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Car returns to its original speed when there are no cars in the vicinity",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "John drives at 60 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "William nears John at 70 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "John speeds up to 80 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "Williams car will adjust its speed back to 70 mph",
+            "match": {
+              "location": "features\\support\\adaptiveCC_steps.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
       }
-    ]
+    ],
+    "id": "adaptive-cruise-control",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Adaptive Cruise Control",
+    "tags": [],
+    "uri": "features\\AdaptiveCC.feature"
   }
 ]
