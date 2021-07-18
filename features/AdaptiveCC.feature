@@ -2,7 +2,7 @@ Feature: Adaptive Cruise Control
   As a driver
   I want my car to adjust its speed to the car in front of me
   So that I can use my cruise control in traffic
-@focus 
+
 Scenario: Car adjusts its speed when it reaches another car
   Given John drives at 60 mph
   And William drives at 70 mph

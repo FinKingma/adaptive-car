@@ -10,13 +10,13 @@
     <div id="carStats">
       <div id="car2Stats">
         <p>Adaptive car</p>
-        <input v-model="car2Speed" v-on:keyup.enter="updateCar2" placeholder="set car 2 speed">
-        <div class='button' v-on:click="updateCar2">Update car!</div>
+        <input v-model="car2Speed" id="car1speed" v-on:keyup.enter="updateCar2" placeholder="set car 2 speed">
+        <div class='button' id="car1update" v-on:click="updateCar2">Update car!</div>
       </div>
       <div id="car1Stats">
         <p>Random car</p>
-        <input v-model="car1Speed" v-on:keyup.enter="updateCar1" placeholder="set car 1 speed">
-        <div class='button' v-on:click="updateCar1">Update car!</div>
+        <input v-model="car1Speed" id="car2speed" v-on:keyup.enter="updateCar1" placeholder="set car 1 speed">
+        <div class='button' id="car2update" v-on:click="updateCar1">Update car!</div>
       </div>
     </div>
   </div>

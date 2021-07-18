@@ -10,6 +10,7 @@
     "unit": "jest --config test/unit/jest.conf.js",
     "test": "cucumber-js --format json:./features/reports/report.json",
     "test-focus": "cucumber-js --tags \"@focus\"",
+    "test:web": "start-server-and-test start 'http://localhost:8081' 'cypress run'",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
   },
@@ -38,6 +39,7 @@
     "css-loader": "^0.28.0",
     "cucumber": "^0.10.4",
     "cucumber-html-reporter": "^2.0.3",
+    "cypress": "^7.7.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -64,6 +66,7 @@
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "sinon": "^4.2.2",
+    "start-server-and-test": "^1.12.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",
