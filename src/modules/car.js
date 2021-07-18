@@ -23,32 +23,7 @@ function Car () {
     this.carInFront = car
   }
 
-  this.checkForIncomingCars = () => {
-    if (this.carInFront) {
-      if (this.carInFront.speed <= this.speed && this.carInFront.pos - +this.pos <= 50) {
-        this.CruiseControlAdjustment = true
-      } else {
-        this.CruiseControlAdjustment = false
-      }
-    }
-  }
-
-  this.adjustSpeedIfNecessary = () => {
-    if (!this.originalSpeed) {
-      this.originalSpeed = this.speed
-    }
-    if (this.CruiseControlAdjustment) {
-      if (!this.carInFront) throw new Error('no car found to adjust to')
-      this.speed = this.carInFront.speed
-    } else {
-      this.speed = this.originalSpeed
-      this.originalSpeed = undefined
-    }
-  }
-
   this.racing = setInterval(() => {
-    this.checkForIncomingCars()
-    this.adjustSpeedIfNecessary()
     this.updatePos()
   }, 25)
 }

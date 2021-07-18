@@ -2,7 +2,7 @@
 
 describe('example to-do app', () => {
   beforeEach(() => {
-    cy.clock()
+    // cy.clock()
     cy.visit('localhost:8081')
   })
 
@@ -11,7 +11,8 @@ describe('example to-do app', () => {
     cy.get('#car2speed').type('1')
     cy.get('#car1update').click()
     cy.get('#car2update').click()
-    cy.tick(6000)
+    cy.wait(6000)
+    // cy.tick(6000)
 
     cy.get('#car1').then(($car1) => {
       cy.log($car1.position.left)
