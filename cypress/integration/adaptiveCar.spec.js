@@ -15,7 +15,7 @@ describe('example to-do app', () => {
     // cy.tick(6000)
 
     cy.get('#car1').then(($car1) => {
-      cy.log($car1.position.left)
+      cy.log("car1", $car1[0].getBoundingClientRect().left)
       cy.get('#car2').then(($car2) => {
         expect($car1[0].getBoundingClientRect().left).to.be.greaterThan($car2[0].getBoundingClientRect().left)
       })
